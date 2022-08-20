@@ -7,11 +7,13 @@ with open('test.txt', 'r') as file:
     for row in test:
         test_data.append(row.strip())
 
-for order in test_data:
-    print(f"Order: {order}")
-    r1 = Robot(order)
-    try:
-        r1.run()
-    except:
-        print('Invalid order')
-    print('*'*50)
+if __name__ == '__main__':
+    for order in test_data:
+        print(' ')
+        print(f"Order: {order}")
+        r1 = Robot(order)
+        try:
+            r1.run()
+        except:
+            print('Invalid order')
+        
