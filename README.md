@@ -15,8 +15,8 @@ If you have several test cases and want to test them at the same time, you can f
 2. Write your test cases, one row for one test case.
 3. Save and close test.txt.
 4. Open Command Prompt and change the directory to program location.
-5. Write this command inside Command Prompt to test the test cases: `python run_testcase.py`.
-6. The program will display the test case and the results (the last location and direction of the robot).
+5. Write this command inside Command Prompt to run the test cases: `python run_testcase.py`.
+6. The program will display the test cases and the results (the last location and direction of the robot).
 
 If you want to test the program but don't want to change the test.txt, simply just follow these steps:
 1. Open Command Prompt and change the directory to program location.
