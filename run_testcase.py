@@ -1,5 +1,6 @@
 from Robot import Robot
 
+
 test_data = []
 with open('test.txt', 'r') as file:
     test = file.readlines()
