@@ -42,25 +42,26 @@ class Robot:
             return 'WEST'
     
     def move_robot(self):
-        for i in self.order:
-            if i.lower() == 'move':
-                if self.direction == 'EAST' and self.X<5:
-                    self.X += 1
-                elif self.direction == 'WEST' and self.X>0:
-                    self.X -= 1
-                elif self.direction == 'NORTH' and self.Y<5:
-                    self.Y += 1
-                elif self.direction == 'SOUTH' and self.Y>0:
-                    self.Y -= 1
+        if self.order[-1].upper() == 'REPORT':
+            for i in self.order:
+                if i.lower() == 'move':
+                    if self.direction == 'EAST' and self.X<4:
+                        self.X += 1
+                    elif self.direction == 'WEST' and self.X>0:
+                        self.X -= 1
+                    elif self.direction == 'NORTH' and self.Y<4:
+                        self.Y += 1
+                    elif self.direction == 'SOUTH' and self.Y>0:
+                        self.Y -= 1
 
-            elif i.lower() == 'left':
-                self.degree -= 90 
-            elif i.lower() == 'right':
-                self.degree += 90
+                elif i.lower() == 'left':
+                    self.degree -= 90 
+                elif i.lower() == 'right':
+                    self.degree += 90
+                
+                self.degree = self.degree_conv()
+                self.direction = self.degree_to_direction()
             
-            self.degree = self.degree_conv()
-            self.direction = self.degree_to_direction()
-        
     def run(self):
         self.move_robot()
         print('Robot Last Position:')
