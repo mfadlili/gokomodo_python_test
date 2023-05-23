@@ -2,6 +2,7 @@ from Robot import Robot
 
 
 if __name__ == '__main__':
+    print("Hello")
     order = input("Please write the order for the robot! ")
     r1 = Robot(order)
     try:
